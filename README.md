@@ -30,7 +30,7 @@ This repository contains the pytorch implementation for the paper [Acc3D: Accele
 
 
 ## News
-- [2025-02-27] Our paper has been accpetd by CVPR 2024!
+- [2025-02-27] Our paper has been accpetd by CVPR 2025!
 
 
 
