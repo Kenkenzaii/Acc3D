@@ -1,7 +1,7 @@
 <br />
 <p align="center">
     <h1 align="center">
-        <span style="color:#0088dd;">Acc3D</span>: Accelerating Single Image to 3D Diffusion Models via Edge Consistency Guided Score Distillation
+        <a href="#">Acc3D</a>: Accelerating Single Image to 3D Diffusion Models via Edge Consistency Guided Score Distillation
     </h1>
 
   <p align="center">
