@@ -18,6 +18,7 @@
   </p>
 
   <p align="center">
+    <a href='http://arxiv.org/abs/2503.15975'><img src='https://img.shields.io/badge/arXiv-2409.18964-b31b1b.svg'  alt='Arxiv'></a>
     <a href='https://acc3d-object.github.io/' style='padding-left: 0.5rem;'>
       <img src='https://img.shields.io/badge/Project-Page-blue?style=flat&logo=Google%20chrome&logoColor=blue' alt='Project Page'></a>
   </p>
