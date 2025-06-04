@@ -27,6 +27,7 @@
 <br />
 
 This repository contains the pytorch implementation for the paper [Acc3D: Accelerating Single Image to 3D Diffusion Models via Edge Consistency Guided Score Distillation](https://acc3d-object.github.io/), CVPR 2025. 
+
 ![cvpr25_poster.png](assets/cvpr25_poster.png)
 
 
