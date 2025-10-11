@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 accelerate launch train_acc3d.py

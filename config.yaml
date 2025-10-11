@@ -1,0 +1,107 @@
+pretrained_teacher_model: pengHTYX_acc3d_baseModel/MacLab-Era3D-512-6view 
+tracker_project_name:  train_acc3d
+output_dir: outputs_formal/lora_64_${tracker_project_name}
+mixed_precision: fp16
+resolution: 512
+lora_rank: 64
+learning_rate: 5e-6
+loss_type: l2 #mix 
+adam_weight_decay: 1e-3
+max_train_steps: 5000
+max_train_samples: 50000
+dataloader_num_workers: 16 
+
+
+
+noise_start_steptime_distill: 600
+noise_start_steptime_consistency: 600
+interval_num: 50
+use_real_latents: False
+validation_steps: 100 
+checkpointing_steps: 1000
+discriminator_gradient_freq: 20
+
+checkpoints_total_limit: 10000
+train_batch_size: 1 # 4 for phased , 1 for era3d
+enable_xformers_memory_efficient_attention: True
+gradient_accumulation_steps: 8
+use_8bit_adam: True
+report_to: wandb
+resume_from_checkpoint: latest
+seed: 453645634
+num_ddim_timesteps: 40
+gradient_checkpointing: True
+logging_dir: logs
+cast_teacher_unet: False
+allow_tf32: False
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-08
+proportion_empty_prompts: 0
+lr_scheduler: constant
+lr_warmup_steps: 500
+num_train_epochs: 100
+not_apply_cfg_solver: False
+huber_c: 0.001
+max_grad_norm: 1.0
+distill_checkpoint_path: pengHTYX_acc3d_baseModel/distill_ckpt 
+
+
+
+revision: null
+
+num_views: 6
+train_dataset:
+  prompt_embeds_path: mvdiffusion/data/fixed_prompt_embeds_6view
+  json_path:  /data/kendong/Data/data1_save_4029d/Era3d_dataset/json_file/valid_uids_era3d.json 
+  root_dir: /data/kendong/Data/data1_save_4029d/Era3d_dataset/out_renderings_all_scale 
+  # json_path:  training_data/dataset.json 
+  # root_dir: training_data/out_renderings_scale
+  # examples: True
+  num_views: ${num_views}
+  bg_color: 'white'
+  img_wh:  [512, 512] 
+  crop_size: -1
+
+
+
+
+pred_type: 'joint'
+save_dir: 'mv_res'
+save_mode: 'rgba' 
+local_rank: -1
+
+pipe_kwargs:
+  num_views: ${num_views}
+
+validation_guidance_scales: [3.0]
+pipe_validation_kwargs:
+  num_inference_steps: 40
+  eta: 1.0
+
+validation_grid_nrow: ${num_views}
+regress_elevation: true
+regress_focal_length: true
+unet_from_pretrained_kwargs:
+  unclip: true
+  sdxl: false
+  num_views: ${num_views}
+  sample_size: 64 
+  zero_init_conv_in: false 
+  
+  regress_elevation: ${regress_elevation}
+  regress_focal_length: ${regress_focal_length}
+  camera_embedding_type: e_de_da_sincos
+  projection_camera_embeddings_input_dim: 4 
+  zero_init_camera_projection: false
+  num_regress_blocks: 3
+  
+  cd_attention_last: false
+  cd_attention_mid: false
+  multiview_attention: true
+  sparse_mv_attention: true
+  selfattn_block: self_rowwise
+  mvcd_attention: true
+
+  use_dino: false
+
