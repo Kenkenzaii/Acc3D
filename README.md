@@ -56,8 +56,8 @@ conda env create -f environment.yaml
 
 ### Training
 
-1. Download the training dataset from this [Google Drive link](https://drive.google.com/drive/folders/1A_o1RqEBTO5XZEac93Xh26SG4vRztOtG?usp=sharing). And unzip the ``rendering_dataset.zip`` in ``training_data`` folder.
-2. Download the base models from this [Google Drive link](https://drive.google.com/drive/folders/1lZyil8NnTlM2gguWBJiTjzaSpSQm4MgX?usp=sharing)
+1. Download the training dataset from this Google Drive link [Dataset](https://drive.google.com/drive/folders/1A_o1RqEBTO5XZEac93Xh26SG4vRztOtG?usp=sharing). And unzip the ``rendering_dataset.zip`` in ``training_data`` folder.
+2. Download the base models from this Google Drive link [BaseModel](https://drive.google.com/drive/folders/1lZyil8NnTlM2gguWBJiTjzaSpSQm4MgX?usp=sharing)
 3. Before you can monitor the training process, make sure to log in to wandb with ``wandb login``.
 4. Run ``bash train.sh``
 
