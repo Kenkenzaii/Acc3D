@@ -53,10 +53,8 @@ revision: null
 num_views: 6
 train_dataset:
   prompt_embeds_path: mvdiffusion/data/fixed_prompt_embeds_6view
-  json_path:  /data/kendong/Data/data1_save_4029d/Era3d_dataset/json_file/valid_uids_era3d.json 
-  root_dir: /data/kendong/Data/data1_save_4029d/Era3d_dataset/out_renderings_all_scale 
-  # json_path:  training_data/dataset.json 
-  # root_dir: training_data/out_renderings_scale
+  json_path:  training_data/dataset.json 
+  root_dir: training_data/out_renderings_scale
   # examples: True
   num_views: ${num_views}
   bg_color: 'white'
