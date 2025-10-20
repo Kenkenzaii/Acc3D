@@ -63,8 +63,8 @@ conda env create -f environment.yaml
 
 
 ### Test
-
-Run ``bash test.sh``
+1. Download the base models from this Google Drive link [BaseModel](https://drive.google.com/drive/folders/1lZyil8NnTlM2gguWBJiTjzaSpSQm4MgX?usp=sharing)
+2. Run ``bash test.sh``
 
 
 ## Acknowledgement
