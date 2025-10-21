@@ -56,14 +56,15 @@ conda env create -f environment.yaml
 
 ### Training
 
-1. Download the training dataset from this Google Drive link [Dataset](https://drive.google.com/drive/folders/1A_o1RqEBTO5XZEac93Xh26SG4vRztOtG?usp=sharing). And unzip the ``rendering_dataset.zip`` in ``training_data`` folder.
-2. Download the base models from this Google Drive link [BaseModel](https://drive.google.com/drive/folders/1lZyil8NnTlM2gguWBJiTjzaSpSQm4MgX?usp=sharing)
-3. Before you can monitor the training process, make sure to log in to wandb with ``wandb login``.
-4. Run ``bash train.sh``
+1. Download the training dataset from this google drive link [Dataset](https://drive.google.com/drive/folders/1A_o1RqEBTO5XZEac93Xh26SG4vRztOtG?usp=sharing). And unzip the ``rendering_dataset.zip`` in ``training_data`` folder.
+2. Download the initial model from this google drive link [DistillModel](https://drive.google.com/drive/folders/1bNDWbr4K_DK9f2N8CgqyrhGqUVO7nwqB?usp=sharing) and put it into the new folder ``pengHTYX_acc3d_baseModel``.
+3. Download the base models from this google drive link [BaseModel](https://drive.google.com/file/d/1W_5phnWLqKUmPnyxJnYHEA5LJh-g_4BY/view?usp=sharing). Unzip and put it into the folder ``pengHTYX_acc3d_baseModel``.
+4. Before you can monitor the training process, make sure to log in to wandb with ``wandb login``.
+5. Run ``bash train.sh``
 
 
 ### Test
-1. Download the base models from this Google Drive link [BaseModel](https://drive.google.com/drive/folders/1lZyil8NnTlM2gguWBJiTjzaSpSQm4MgX?usp=sharing)
+1. Download the base models from this google drive link [BaseModel](https://drive.google.com/file/d/1W_5phnWLqKUmPnyxJnYHEA5LJh-g_4BY/view?usp=sharing). Unzip and put it into the folder ``pengHTYX_acc3d_baseModel``.
 2. Run ``bash test.sh``
 
 
