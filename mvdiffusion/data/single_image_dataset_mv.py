@@ -195,11 +195,10 @@ class SingleImageDataset(Dataset):
         # pil always returns uint8
         if Imagefile is None:
             image_input = Image.open(img_path) #.convert('RGBA')
-            # a = Image.open("/data1/kendong/Phased-Consistency-Model-Era3d/code/text_to_image_sd15/examples/3968940-PH.png")
         else:
             image_input = Imagefile
         image_size = self.img_wh[0]
-        # print(np.array(image_input).shape, np.array(a).shape)
+ 
         
         # try:
         if self.crop_size!=-1:

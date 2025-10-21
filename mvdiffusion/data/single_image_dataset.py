@@ -416,7 +416,6 @@ class SingleImageDatasetGenerator(Dataset):
 
         img_tensors_in = [image.permute(2, 0, 1)] * self.num_views
         img_tensors_in = torch.stack(img_tensors_in, dim=0).float()  # (Nv, 3, H, W)
-        print(img_tensors_in.shape)
 
         normal_prompt_embeddings = (
             self.normal_text_embeds if hasattr(self, "normal_text_embeds") else None
@@ -673,7 +672,6 @@ class SingleImageDataset(Dataset):
                 #     continue
                 self.all_images.append(image)
                 self.all_alphas.append(alpha)
-        # print(f"[INFO] In total, {file_skip_count} files have been corrupted and dataloader skips these files.")
 
         # self.all_images = self.all_images[:num_validation_samples]
         # self.all_alphas = self.all_alphas[:num_validation_samples]
@@ -721,11 +719,10 @@ class SingleImageDataset(Dataset):
         # pil always returns uint8
         if Imagefile is None:
             image_input = Image.open(img_path)  # .convert('RGBA')
-            # a = Image.open("/data1/kendong/Phased-Consistency-Model-Era3d/code/text_to_image_sd15/examples/3968940-PH.png")
         else:
             image_input = Imagefile
         image_size = self.img_wh[0]
-        # print(np.array(image_input).shape, np.array(a).shape)
+   
 
         # try:
         if self.crop_size != -1:
